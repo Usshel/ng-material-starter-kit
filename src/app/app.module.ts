@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
 import {ProductServiceModule} from "./services/product.service-module";
 import {ProductListComponentModule} from "./components/product-list/product-list.component-module";
+import {CategoryListComponentModule} from "./components/category-list/category-list.component-module";
+import {CategoriesServiceModule} from "./services/categories.service-module";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {ProductListComponentModule} from "./components/product-list/product-list
     BrowserAnimationsModule,
     HttpClientModule,
     ProductServiceModule,
-    ProductListComponentModule
+    ProductListComponentModule,
+    CategoryListComponentModule,
+    CategoriesServiceModule
 
   ],
   providers: [],
