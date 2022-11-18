@@ -8,6 +8,7 @@ import { CategoriesCheckboxlistComponent } from './components/categories-checkbo
 import { CategoriesSelectionComponent } from './components/categories-selection/categories-selection.component';
 import { ProductTableComponent } from './components/product-table/product-table.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -20,6 +21,8 @@ import { CategoriesCheckboxlistComponentModule } from './components/categories-c
 import { CategoriesSelectionComponentModule } from './components/categories-selection/categories-selection.component-module';
 import { ProductTableComponentModule } from './components/product-table/product-table.component-module';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
+import { EmployeeFormComponentModule } from './components/employee-form/employee-form.component-module';
+import { EmployeeServiceModule } from './services/employee.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -30,8 +33,9 @@ import { ProductFormComponentModule } from './components/product-form/product-fo
     { path: 'checkbox-categories', component: CategoriesCheckboxlistComponent },
     { path: 'categories-menu', component: CategoriesSelectionComponent },
     { path: 'product-search', component: ProductTableComponent },
-    { path: 'create-product', component: ProductFormComponent }
-  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule],
+    { path: 'create-product', component: ProductFormComponent },
+    { path: 'create-employee', component: EmployeeFormComponent }
+  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeeServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
