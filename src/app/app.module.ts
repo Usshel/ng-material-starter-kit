@@ -9,6 +9,9 @@ import {ProductServiceModule} from "./services/product.service-module";
 import {ProductListComponentModule} from "./components/product-list/product-list.component-module";
 import {CategoryListComponentModule} from "./components/category-list/category-list.component-module";
 import {CategoriesServiceModule} from "./services/categories.service-module";
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatSortModule} from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import {CategoriesServiceModule} from "./services/categories.service-module";
     ProductServiceModule,
     ProductListComponentModule,
     CategoryListComponentModule,
-    CategoriesServiceModule
+    CategoriesServiceModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
 
   ],
   providers: [],
