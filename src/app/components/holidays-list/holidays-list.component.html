@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-title></mat-card-title>
+</mat-card>
+<mat-form-field appearance="fill">
+  <mat-label>Choose an option</mat-label>
+  <mat-select role="list">
+    <mat-option [value]=item.name role="listitem" *ngFor="let item of HolidaysList$ | async" >{{item.name}}</mat-option>
+  </mat-select>
+</mat-form-field>
