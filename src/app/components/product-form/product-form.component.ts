@@ -1,6 +1,9 @@
-import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
-import {ProductService} from '../../services/product.service';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { CategoriesModel } from '../../models/categories.model';
+import { ProductService } from '../../services/product.service';
+import { CategoriesService } from '../../services/categories.service';
 
 @Component({
   selector: 'app-product-form',
@@ -17,9 +20,11 @@ export class ProductFormComponent {
     image: new FormControl(),
     category: new FormControl()
   });
+  readonly categories$: Observable<CategoriesModel[]> = this._categoriesService.getAll();
 
-  constructor(private _productService: ProductService) {
+  constructor(private _productService: ProductService, private _categoriesService: CategoriesService) {
   }
+
 
   onProductFormSubmitted(productForm: FormGroup): void {
     this._productService.create({
