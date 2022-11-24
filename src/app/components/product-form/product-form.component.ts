@@ -1,9 +1,9 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { CategoriesModel } from '../../models/categories.model';
-import { ProductService } from '../../services/product.service';
-import { CategoriesService } from '../../services/categories.service';
+import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {Observable} from 'rxjs';
+import {CategoriesModel} from '../../models/categories.model';
+import {ProductService} from '../../services/product.service';
+import {CategoriesService} from '../../services/categories.service';
 
 @Component({
   selector: 'app-product-form',
@@ -35,4 +35,6 @@ export class ProductFormComponent {
       image: productForm.get('image')?.value,
     }).subscribe();
   }
+
+
 }

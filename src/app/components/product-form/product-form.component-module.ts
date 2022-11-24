@@ -10,9 +10,19 @@ import {MatCardModule} from "@angular/material/card";
 import {CategoriesSelectionComponentModule} from "../categories-selection/categories-selection.component-module";
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 @NgModule({
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatButtonModule, MatListModule, MatCardModule, CategoriesSelectionComponentModule, MatOptionModule, MatSelectModule],
+  imports: [ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    CommonModule,
+    MatButtonModule,
+    MatListModule,
+    MatCardModule,
+    CategoriesSelectionComponentModule,
+    MatOptionModule,
+    MatSelectModule],
   declarations: [ProductFormComponent],
   providers: [],
   exports: [ProductFormComponent]

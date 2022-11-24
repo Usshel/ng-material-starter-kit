@@ -10,11 +10,12 @@ export class ProductService {
 
   //Omit typ który bierze Wszystkie props i tworzy nowy typ usuwając z niego dany key(props)
   //Observable to strumień, który emituje wartości (pojedyńcze lub wiele) dowolnego typu do którego możesz się podłączyć oraz od niego odłączyć
+  //porównanie: rzeka w której płyną[emituje] różne[dowolnego typu] przedmioty[wartości]
   create(product: Omit<ProductModel, 'id'>): Observable<ProductModel> {
     return this._httpClient.post<ProductModel>('https://fakestoreapi.com/products', product);
   }
 
-  //porównanie: rzeka w której płyną[emituje] różne[dowolnego typu] przedmioty[wartości]
+
   getAll(): Observable<ProductModel[]> {
     return this._httpClient.get<ProductModel[]>('https://fakestoreapi.com/products');
   }
