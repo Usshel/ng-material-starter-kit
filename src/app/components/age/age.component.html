@@ -1,6 +1,11 @@
 <mat-card>
-  <mat-card-title>Age prediction</mat-card-title>
+  <mat-card-title class="text-bg-success p-3">Age prediction</mat-card-title>
   <mat-card-content>
-    <ng-container *ngIf="age$ | async as item">{{ item.age }}</ng-container>
+    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Your age is:</div>
+      <div class="card-body">
+        <ng-container *ngIf="age$ | async as item"> {{ item.age }}</ng-container>
+      </div>
+    </div>
   </mat-card-content>
 </mat-card>
