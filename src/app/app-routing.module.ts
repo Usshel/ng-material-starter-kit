@@ -17,6 +17,7 @@ import { AgeComponent } from './components/age/age.component';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { BoredActivitiesComponent } from './components/bored-activities/bored-activities.component';
+import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -47,6 +48,7 @@ import { UserDetailsComponentModule } from './components/user-details/user-detai
 import { UserServiceModule } from './services/user.service-module';
 import { BoredActivitiesComponentModule } from './components/bored-activities/bored-activities.component-module';
 import { BoredServiceModule } from './services/bored.service-module';
+import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -67,8 +69,9 @@ import { BoredServiceModule } from './services/bored.service-module';
     { path: 'cart/:id', component: CartDetailsComponent },
     { path: 'user/:id', component: CartDetailsComponent },
     { path: 'users/:id', component: UserDetailsComponent },
-    { path: 'activity/:participants', component: BoredActivitiesComponent }
-  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule],
+    { path: 'activity/:participants', component: BoredActivitiesComponent },
+    { path: 'products/:category', component: FilteredProductListComponent }
+  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
