@@ -89,6 +89,10 @@
     "title-description": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "<h1>$title$</h1>\n<p>$description$</p>"
+    },
+    "is-that-my-own-template": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "<h1>$title$</h1>\n<div class=\"d-inline p-2 text-bg-primary\">$content$</div>"
     }
   }
 }

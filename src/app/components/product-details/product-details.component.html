@@ -1,2 +1,12 @@
-<ng-container *ngIf="productDetails$ | async as item"><h1>{{item.title}}</h1>
-  <p>{{item.description}}</p></ng-container>
+<mat-card >
+  <mat-card-title>Product details</mat-card-title>
+  <mat-card-content>
+    <div class="border border-primary" class="shadow-lg p-3 mb-5 bg-body rounded" >
+      <ng-container *ngIf="productDetails$ | async as item">
+        <h1 class="text-center">{{item.title}}</h1>
+        <p class="text-center">{{item.description}}</p>
+      </ng-container>
+    </div>
+  </mat-card-content>
+</mat-card>
+
