@@ -20,6 +20,10 @@ export class FilteredProductListComponent {
     return products.filter((product:ProductModel)=> product.category===params['category']);
     }));
 
+
   constructor(private _categoriesService: CategoriesService, private _productService: ProductService, private _activatedRoute: ActivatedRoute) {
   }
+
+
+
 }
