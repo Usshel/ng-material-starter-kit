@@ -8,8 +8,8 @@ export class CategoriesService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  getAll(): Observable<CategoriesModel[]> {
-    return this._httpClient.get<CategoriesModel[]>('https://fakestoreapi.com/products/categories');
+  getAll(): Observable<string[]> {
+    return this._httpClient.get<string[]>('https://fakestoreapi.com/products/categories');
   }
 
   getAllString(): Observable<string[]> {

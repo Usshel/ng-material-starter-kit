@@ -12,18 +12,17 @@ import { ProductService } from '../../services/product.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FilteredProductListComponent {
-  readonly categories$: Observable<string[]> = this._categoriesService.getAllString();
+  readonly categories$: Observable<string[]> = this._categoriesService.getAll();
+
   readonly products$: Observable<ProductModel[]> = combineLatest([
     this._productService.getAll(),
     this._activatedRoute.params
-  ]).pipe(map( ([products, params]:[ProductModel[], Params]) =>{
-    return products.filter((product:ProductModel)=> product.category===params['category']);
+  ]).pipe(map(([products, params]: [ProductModel[], Params]) => {
+    return products.filter((product: ProductModel) => product.category === params['category']);
     }));
 
 
+//need to combine productService with Categories by
   constructor(private _categoriesService: CategoriesService, private _productService: ProductService, private _activatedRoute: ActivatedRoute) {
   }
-
-
-
 }

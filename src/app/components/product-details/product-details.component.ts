@@ -3,7 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Observable} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
 import {ProductModel} from '../../models/product.model';
-import {ProductDetailsService} from '../../services/product-details.service';
+import {ProductService} from '../../services/product.service';
 
 @Component({
   selector: 'app-product-details',
@@ -14,9 +14,9 @@ import {ProductDetailsService} from '../../services/product-details.service';
 })
 export class ProductDetailsComponent {
   readonly productDetails$: Observable<ProductModel> = this._activatedRoute.params.pipe(
-    switchMap(data => this._productDetailsService.getOne(data['id']))
+    switchMap(data => this._productService.getOne(data['id']))
   );
 
-  constructor(private _activatedRoute: ActivatedRoute, private _productDetailsService: ProductDetailsService) {
+  constructor(private _activatedRoute: ActivatedRoute, private _productService: ProductService) {
   }
 }

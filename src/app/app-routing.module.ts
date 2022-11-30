@@ -18,6 +18,7 @@ import { CartDetailsComponent } from './components/cart-details/cart-details.com
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { BoredActivitiesComponent } from './components/bored-activities/bored-activities.component';
 import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
+import { FilteredProductListSecondComponent } from './components/filtered-product-list-second/filtered-product-list-second.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -49,6 +50,7 @@ import { UserServiceModule } from './services/user.service-module';
 import { BoredActivitiesComponentModule } from './components/bored-activities/bored-activities.component-module';
 import { BoredServiceModule } from './services/bored.service-module';
 import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
+import { FilteredProductListSecondComponentModule } from './components/filtered-product-list-second/filtered-product-list-second.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -63,15 +65,16 @@ import { FilteredProductListComponentModule } from './components/filtered-produc
     { path: 'create-employee', component: EmployeeFormComponent },
     { path: 'login', component: LoginFormComponent },
     { path: 'register', component: RegisterFormComponent },
-    { path: 'product/:id', component: ProductDetailsComponent },
+    { path: 'products/:id', component: ProductDetailsComponent },
     { path: 'cat-fact', component: CatComponent },
     { path: 'age/:name', component: AgeComponent },
     { path: 'cart/:id', component: CartDetailsComponent },
     { path: 'user/:id', component: CartDetailsComponent },
     { path: 'users/:id', component: UserDetailsComponent },
     { path: 'activity/:participants', component: BoredActivitiesComponent },
-    { path: 'products/:category', component: FilteredProductListComponent }
-  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule],
+    { path: 'producters/:category', component: FilteredProductListComponent },
+    { path: 'products-second', component: FilteredProductListSecondComponent }
+  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

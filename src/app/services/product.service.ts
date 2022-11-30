@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {ProductModel} from '../models/product.model';
+import {ProductDetailsModel} from "../models/product-details.model";
 
 @Injectable()
 export class ProductService {
@@ -15,6 +16,9 @@ export class ProductService {
     return this._httpClient.post<ProductModel>('https://fakestoreapi.com/products', product);
   }
 
+  getOne(id: string): Observable<ProductModel> {
+    return this._httpClient.get<ProductModel>('https://fakestoreapi.com/products/' + id);
+  }
 
   getAll(): Observable<ProductModel[]> {
     return this._httpClient.get<ProductModel[]>('https://fakestoreapi.com/products');

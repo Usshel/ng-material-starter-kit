@@ -2,6 +2,8 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 import { Observable } from 'rxjs';
 import { ProductModel } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import {ActivatedRoute} from "@angular/router";
+import {ProductDetailsService} from "../../services/product-details.service";
 
 @Component({
   selector: 'app-product-list',
@@ -13,6 +15,6 @@ import { ProductService } from '../../services/product.service';
 export class ProductListComponent {
   readonly list$: Observable<ProductModel[]> = this._productService.getAll();
 
-  constructor(private _productService: ProductService) {
+  constructor(private _productService: ProductService, private _activatedRoute: ActivatedRoute) {
   }
 }
