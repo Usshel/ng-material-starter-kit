@@ -1,9 +1,9 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
 import {BehaviorSubject, Observable, Subject, combineLatest, of, switchMap} from 'rxjs';
-import { map } from 'rxjs/operators';
-import { ProductModel } from '../../models/product.model';
-import { CategoriesService } from '../../services/categories.service';
-import { ProductService } from '../../services/product.service';
+import {map} from 'rxjs/operators';
+import {ProductModel} from '../../models/product.model';
+import {CategoriesService} from '../../services/categories.service';
+import {ProductService} from '../../services/product.service';
 
 @Component({
   selector: 'app-filtered-product-list-second',
@@ -13,10 +13,11 @@ import { ProductService } from '../../services/product.service';
 })
 export class FilteredProductListSecondComponent {
   readonly categories$: Observable<string[]> = this._categoriesService.getAll();
-  private _categorySubject: Subject<string> = new Subject<string>();
-  private _orderSubject: BehaviorSubject<string> = new BehaviorSubject<string>('asc');
 
+  private _categorySubject: Subject<string> = new Subject<string>();
   public category$: Observable<string> = this._categorySubject.asObservable();
+
+  private _orderSubject: BehaviorSubject<string> = new BehaviorSubject<string>('asc');
   public order$: Observable<string> = this._orderSubject.asObservable();
 
 
@@ -25,7 +26,6 @@ export class FilteredProductListSecondComponent {
     this.order$
   ]).pipe(
     switchMap(([category, order]: [string, string]) => this._productService.getAll().pipe(
-
       map((products) => products.filter((product) => product.category === category)),
 
       map((products) => {
@@ -39,7 +39,7 @@ export class FilteredProductListSecondComponent {
   );
 
 
-  public orders: Observable<string[]> = of(['asc','desc'])
+  public orders: Observable<string[]> = of(['asc', 'desc'])
 
   constructor(private _categoriesService: CategoriesService, private _productService: ProductService) {
   }
