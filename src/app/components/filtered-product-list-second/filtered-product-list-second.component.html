@@ -1,9 +1,10 @@
 <mat-card>
-  <mat-card-title>Categories</mat-card-title>
+  <mat-card-title>Age range</mat-card-title>
   <mat-card-content>
     <mat-selection-list role="list" fxLayout="row" [multiple]="false">
-      <mat-list-option role="listoption" *ngFor="let item of categories$ | async" [value]="item" (click)="selectCategory(item)">
-      {{item}}
+      <mat-list-option role="listoption" *ngFor="let item of categories$ | async" [value]="item"
+                       (click)="selectCategory(item)">
+        {{item}}
       </mat-list-option>
     </mat-selection-list>
   </mat-card-content>
@@ -12,11 +13,7 @@
 <mat-card>
   <mat-card-title>Order by price</mat-card-title>
   <mat-card-content>
-    <mat-selection-list role="list" fxLayout="row" [multiple]="false">
-      <mat-list-option role="listoption" *ngFor="let item of orders | async" (click)="sort(item)">
-        {{item}}
-      </mat-list-option>
-    </mat-selection-list>
+
   </mat-card-content>
 </mat-card>
 
@@ -24,7 +21,8 @@
   <mat-card-title>Products</mat-card-title>
   <mat-card-content>
     <mat-list role="list">
-      <mat-list-item role="listitem" *ngFor="let item of products$ | async">{{item.title}} Price: {{item.price}}$</mat-list-item>
+      <mat-list-item role="listitem" *ngFor="let item of products$ | async">{{item.title}} Price: {{item.price}}$
+      </mat-list-item>
     </mat-list>
   </mat-card-content>
 </mat-card>

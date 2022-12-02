@@ -11,9 +11,6 @@ export class EmployeeService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  create(employee: Omit<EmployeeModel, 'id'>): Observable<EmployeeModel> {
-    return this._httpClient.post<EmployeeModel>('https://dummy.restapiexample.com/api/v1/create', employee);
-  }
 
   getAll(): Observable<EmployeeModel[]> {
     return this._httpClient.get<ApiResponse<EmployeeResponse[]>>

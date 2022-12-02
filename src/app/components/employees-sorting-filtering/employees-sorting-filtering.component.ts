@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
-import {BehaviorSubject, combineLatest, min, Observable, of, ReplaySubject, Subject, switchMap} from 'rxjs';
+import {BehaviorSubject, combineLatest, min, Observable, of, ReplaySubject, Subject, switchMap, take} from 'rxjs';
 import {EmployeeModel} from '../../models/employee.model';
 import {EmployeeService} from '../../services/employee.service';
 import {map} from "rxjs/operators";
@@ -37,8 +37,8 @@ export class EmployeesSortingFilteringComponent {
     this._orderPriceSubject.asObservable()
   ]).pipe(
     switchMap(([age, price]: [Age, string]) => this._employeeService.getAll().pipe(
+      take(1),
       map((employees) => employees.filter((employees) => employees.employee_age > age.minAge && employees.employee_age < age.maxAge)),
-
       map((employees) => {
         return employees.sort((a, b) => {
           if (a.employee_salary > b.employee_salary) return price === 'asc' ? 1 : -1;
@@ -51,15 +51,16 @@ export class EmployeesSortingFilteringComponent {
 
   public orders: Observable<string[]> = of(['asc', 'desc'])
 
+  constructor(private _employeeService: EmployeeService) {
+  }
 
   sortAge(minAge: number, maxAge: number): void {
     this._filterAgeSubject.next({maxAge: maxAge, minAge: minAge});
   }
 
-  sort(order: Age): void {
-    this._filterAgeSubject.next(order);
+  sortPrice(order: string): void {
+    this._orderPriceSubject.next(order);
   }
 
-  constructor(private _employeeService: EmployeeService) {
-  }
+
 }
