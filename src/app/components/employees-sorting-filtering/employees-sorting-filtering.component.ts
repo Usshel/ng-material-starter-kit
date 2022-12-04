@@ -19,6 +19,7 @@ export class EmployeesSortingFilteringComponent {
 
 
   public age: Observable<Age[]> = of([
+    {minAge: 0, maxAge: 100},
     {minAge: 0, maxAge: 20},
     {minAge: 21, maxAge: 30},
     {minAge: 31, maxAge: 40},
