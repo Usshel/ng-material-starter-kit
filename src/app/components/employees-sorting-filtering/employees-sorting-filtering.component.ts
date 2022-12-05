@@ -41,9 +41,9 @@ export class EmployeesSortingFilteringComponent {
       take(1),
       map((employees) => employees.filter((employees) => employees.employee_age > age.minAge && employees.employee_age < age.maxAge)),
       map((employees) => {
-        return employees.sort((a, b) => {
-          if (a.employee_salary > b.employee_salary) return price === 'asc' ? 1 : -1;
-          if (a.employee_salary < b.employee_salary) return price === 'asc' ? -1 : 1;
+        return employees.sort((employeeA, employeeB) => {
+          if (employeeA.employee_salary > employeeB.employee_salary) return price === 'asc' ? 1 : -1;
+          if (employeeA.employee_salary < employeeB.employee_salary) return price === 'asc' ? -1 : 1;
           return 0
         })
       }))

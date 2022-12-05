@@ -20,6 +20,7 @@ import { FilteredProductListComponent } from './components/filtered-product-list
 import { FilteredProductListSecondComponent } from './components/filtered-product-list-second/filtered-product-list-second.component';
 import { EmployeesSortingFilteringComponent } from './components/employees-sorting-filtering/employees-sorting-filtering.component';
 import { ProductsAdvancedDeleteComponent } from './components/products-advanced-delete/products-advanced-delete.component';
+import { EmployeesAdvancedDeleteComponent } from './components/employees-advanced-delete/employees-advanced-delete.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -53,6 +54,7 @@ import { FilteredProductListComponentModule } from './components/filtered-produc
 import { FilteredProductListSecondComponentModule } from './components/filtered-product-list-second/filtered-product-list-second.component-module';
 import { EmployeesSortingFilteringComponentModule } from './components/employees-sorting-filtering/employees-sorting-filtering.component-module';
 import { ProductsAdvancedDeleteComponentModule } from './components/products-advanced-delete/products-advanced-delete.component-module';
+import { EmployeesAdvancedDeleteComponentModule } from './components/employees-advanced-delete/employees-advanced-delete.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -76,8 +78,9 @@ import { ProductsAdvancedDeleteComponentModule } from './components/products-adv
     { path: 'producters/:category', component: FilteredProductListComponent },
     { path: 'products-second', component: FilteredProductListSecondComponent },
     { path: 'employees-sort-filter', component: EmployeesSortingFilteringComponent },
-    { path: 'products-advanced-delete', component: ProductsAdvancedDeleteComponent }
-  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule],
+    { path: 'products-advanced-delete', component: ProductsAdvancedDeleteComponent },
+    { path: 'refresh-employees', component: EmployeesAdvancedDeleteComponent }
+  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
