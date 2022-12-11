@@ -12,8 +12,10 @@ import {ProductService} from '../../services/product.service';
 })
 export class ProductsMasterDetailsComponent {
   readonly productsList$: Observable<ProductModel[]> = this._productService.getAll();
+
   private _selectedProductIdSubject: Subject<number> = new Subject<number>();
   public selectedProductId$: Observable<number> = this._selectedProductIdSubject.asObservable();
+
   readonly productDetails$: Observable<ProductModel> = this.selectedProductId$.pipe(
     switchMap(data => this._productService.getOne(data)));
 

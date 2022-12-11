@@ -1,0 +1,15 @@
+<mat-grid-list cols="2" rowHeight="1:2">
+  <mat-grid-tile>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let employee of employees$ | async">
+        {{employee.employee_name}}
+        <button mat-button color="accent" (click)="selectedEmployee(employee.id)">Details</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <ng-container *ngIf="employeeDetails$ | async as item"> {{item.data.employee_name}}
+      {{item.data.employee_salary}} $
+    </ng-container>
+  </mat-grid-tile>
+</mat-grid-list>

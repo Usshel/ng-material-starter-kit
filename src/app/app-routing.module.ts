@@ -22,6 +22,7 @@ import { EmployeesSortingFilteringComponent } from './components/employees-sorti
 import { ProductsAdvancedDeleteComponent } from './components/products-advanced-delete/products-advanced-delete.component';
 import { EmployeesAdvancedDeleteComponent } from './components/employees-advanced-delete/employees-advanced-delete.component';
 import { ProductsMasterDetailsComponent } from './components/products-master-details/products-master-details.component';
+import { EmployeeMasterDetailsComponent } from './components/employee-master-details/employee-master-details.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -57,6 +58,7 @@ import { EmployeesSortingFilteringComponentModule } from './components/employees
 import { ProductsAdvancedDeleteComponentModule } from './components/products-advanced-delete/products-advanced-delete.component-module';
 import { EmployeesAdvancedDeleteComponentModule } from './components/employees-advanced-delete/employees-advanced-delete.component-module';
 import { ProductsMasterDetailsComponentModule } from './components/products-master-details/products-master-details.component-module';
+import { EmployeeMasterDetailsComponentModule } from './components/employee-master-details/employee-master-details.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -82,8 +84,9 @@ import { ProductsMasterDetailsComponentModule } from './components/products-mast
     { path: 'employees-sort-filter', component: EmployeesSortingFilteringComponent },
     { path: 'products-advanced-delete', component: ProductsAdvancedDeleteComponent },
     { path: 'refresh-employees', component: EmployeesAdvancedDeleteComponent },
-    { path: 'products-master-details', component: ProductsMasterDetailsComponent }
-  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule, ProductsMasterDetailsComponentModule],
+    { path: 'products-master-details', component: ProductsMasterDetailsComponent },
+    { path: 'employees-master-details', component: EmployeeMasterDetailsComponent }
+  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule, ProductsMasterDetailsComponentModule, EmployeeMasterDetailsComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

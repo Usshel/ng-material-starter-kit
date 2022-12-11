@@ -1,10 +1,9 @@
-export interface EmployeeResponse {
+import {EmployeeModel} from "../models/employee.model";
 
-  readonly  id: number;
-  readonly  employee_name: string;
-  readonly employee_salary: number;
-  readonly  employee_age: number;
-  readonly  profile_image: string;
+export interface EmployeeResponse {
+  status: string,
+  data: EmployeeModel[],
+  message: string,
 
 
 }

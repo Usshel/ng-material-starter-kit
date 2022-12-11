@@ -8,6 +8,6 @@
     </mat-list>
   </mat-grid-tile>
   <mat-grid-tile>
-    <ng-container *ngIf="productDetails$ | async as item">{{item.title}}  {{item.price}} $</ng-container>
+    <ng-container *ngIf="productDetails$ | async as item">{{item.title}} {{item.price}} $</ng-container>
   </mat-grid-tile>
 </mat-grid-list>
