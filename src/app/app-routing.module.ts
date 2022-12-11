@@ -21,6 +21,7 @@ import { FilteredProductListSecondComponent } from './components/filtered-produc
 import { EmployeesSortingFilteringComponent } from './components/employees-sorting-filtering/employees-sorting-filtering.component';
 import { ProductsAdvancedDeleteComponent } from './components/products-advanced-delete/products-advanced-delete.component';
 import { EmployeesAdvancedDeleteComponent } from './components/employees-advanced-delete/employees-advanced-delete.component';
+import { ProductsMasterDetailsComponent } from './components/products-master-details/products-master-details.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -55,6 +56,7 @@ import { FilteredProductListSecondComponentModule } from './components/filtered-
 import { EmployeesSortingFilteringComponentModule } from './components/employees-sorting-filtering/employees-sorting-filtering.component-module';
 import { ProductsAdvancedDeleteComponentModule } from './components/products-advanced-delete/products-advanced-delete.component-module';
 import { EmployeesAdvancedDeleteComponentModule } from './components/employees-advanced-delete/employees-advanced-delete.component-module';
+import { ProductsMasterDetailsComponentModule } from './components/products-master-details/products-master-details.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -79,8 +81,9 @@ import { EmployeesAdvancedDeleteComponentModule } from './components/employees-a
     { path: 'products-second', component: FilteredProductListSecondComponent },
     { path: 'employees-sort-filter', component: EmployeesSortingFilteringComponent },
     { path: 'products-advanced-delete', component: ProductsAdvancedDeleteComponent },
-    { path: 'refresh-employees', component: EmployeesAdvancedDeleteComponent }
-  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule],
+    { path: 'refresh-employees', component: EmployeesAdvancedDeleteComponent },
+    { path: 'products-master-details', component: ProductsMasterDetailsComponent }
+  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule, ProductsMasterDetailsComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

@@ -37,8 +37,6 @@ export class FilteredProductListSecondComponent {
       }))
     )
   );
-
-
   public orders: Observable<string[]> = of(['asc', 'desc'])
 
   constructor(private _categoriesService: CategoriesService, private _productService: ProductService) {

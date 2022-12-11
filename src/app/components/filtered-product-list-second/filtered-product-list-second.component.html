@@ -13,7 +13,10 @@
 <mat-card>
   <mat-card-title>Order by price</mat-card-title>
   <mat-card-content>
-
+    <mat-selection-list role="list">
+      <mat-list-option role="listitem" *ngFor="let item of orders | async"
+                       (click)="sort(item)">{{item}}</mat-list-option>
+    </mat-selection-list>
   </mat-card-content>
 </mat-card>
 
