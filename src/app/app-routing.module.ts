@@ -24,6 +24,7 @@ import { EmployeesAdvancedDeleteComponent } from './components/employees-advance
 import { ProductsMasterDetailsComponent } from './components/products-master-details/products-master-details.component';
 import { EmployeeMasterDetailsComponent } from './components/employee-master-details/employee-master-details.component';
 import { CryptoMasterDetailsComponent } from './components/crypto-master-details/crypto-master-details.component';
+import { ProductsEmptyStateComponent } from './components/products-empty-state/products-empty-state.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -61,6 +62,7 @@ import { EmployeesAdvancedDeleteComponentModule } from './components/employees-a
 import { ProductsMasterDetailsComponentModule } from './components/products-master-details/products-master-details.component-module';
 import { EmployeeMasterDetailsComponentModule } from './components/employee-master-details/employee-master-details.component-module';
 import { CryptoMasterDetailsComponentModule } from './components/crypto-master-details/crypto-master-details.component-module';
+import { ProductsEmptyStateComponentModule } from './components/products-empty-state/products-empty-state.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -88,8 +90,9 @@ import { CryptoMasterDetailsComponentModule } from './components/crypto-master-d
     { path: 'refresh-employees', component: EmployeesAdvancedDeleteComponent },
     { path: 'products-master-details', component: ProductsMasterDetailsComponent },
     { path: 'employees-master-details', component: EmployeeMasterDetailsComponent },
-    { path: 'crypto-master-details', component: CryptoMasterDetailsComponent }
-  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule, ProductsMasterDetailsComponentModule, EmployeeMasterDetailsComponentModule, CryptoMasterDetailsComponentModule],
+    { path: 'crypto-master-details', component: CryptoMasterDetailsComponent },
+    { path: 'products-empty-state', component: ProductsEmptyStateComponent }
+  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule, ProductsMasterDetailsComponentModule, EmployeeMasterDetailsComponentModule, CryptoMasterDetailsComponentModule, ProductsEmptyStateComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

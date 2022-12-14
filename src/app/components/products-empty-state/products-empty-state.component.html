@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>Product list</mat-card-title>
+  <mat-card-content>
+    <mat-list role="list" *ngIf="productsList$| async as list; else loading ">
+      <mat-list-item role="listitem" *ngFor="let item of list">{{item.title}} {{item.price}}$
+      </mat-list-item>
+    </mat-list>
+    <ng-template #loading>
+      <mat-progress-spinner
+        [color]="'primary'"
+        [mode]="'indeterminate'"
+        [value]="50">
+      </mat-progress-spinner>
+    </ng-template>
+  </mat-card-content>
+</mat-card>
