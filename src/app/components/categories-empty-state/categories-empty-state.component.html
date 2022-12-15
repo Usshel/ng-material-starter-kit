@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-title>Categories</mat-card-title>
+  <mat-card-title>Select category</mat-card-title>
   <mat-card-content>
     <mat-selection-list role="list" *ngIf="categoriesList$ | async as list; else loading">
       <ng-container *ngIf="list.length > 0; else emptyState">
