@@ -13,7 +13,6 @@ import {map} from "rxjs/operators";
 export class ProductsEmptyStateComponent {
   readonly productsList$: Observable<ProductModel[]> = this._productService.getAll().pipe(
     delay(2000),
-
     map(() => [])
   );
 

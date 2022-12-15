@@ -1,14 +1,14 @@
 <mat-card>
-  <mat-card-title>Product list</mat-card-title>
+  <mat-card-title>Categories</mat-card-title>
   <mat-card-content>
-    <mat-list role="list" *ngIf="productsList$| async as list; else loading ">
+    <mat-selection-list role="list" *ngIf="categoriesList$ | async as list; else loading">
       <ng-container *ngIf="list.length > 0; else emptyState">
-        <mat-list-item role="listitem" *ngFor="let item of list">{{item.title}} {{item.price}}$</mat-list-item>
+        <mat-list-option role="listitem" *ngFor="let item of list">{{item}}</mat-list-option>
       </ng-container>
       <ng-template #emptyState>
-        Oops! There is no data!
+        Ooooooops there is no categories ;C
       </ng-template>
-    </mat-list>
+    </mat-selection-list>
     <ng-template #loading>
       <mat-progress-spinner
         [color]="'primary'"
