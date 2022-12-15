@@ -28,6 +28,7 @@ import { ProductsEmptyStateComponent } from './components/products-empty-state/p
 import { CategoriesEmptyStateComponent } from './components/categories-empty-state/categories-empty-state.component';
 import { CryptoEmptyStateComponent } from './components/crypto-empty-state/crypto-empty-state.component';
 import { PublicHolidaysEmptyStateComponent } from './components/public-holidays-empty-state/public-holidays-empty-state.component';
+import { CategoriesCheckboxEmptyStateComponent } from './components/categories-checkbox-empty-state/categories-checkbox-empty-state.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -69,6 +70,7 @@ import { ProductsEmptyStateComponentModule } from './components/products-empty-s
 import { CategoriesEmptyStateComponentModule } from './components/categories-empty-state/categories-empty-state.component-module';
 import { CryptoEmptyStateComponentModule } from './components/crypto-empty-state/crypto-empty-state.component-module';
 import { PublicHolidaysEmptyStateComponentModule } from './components/public-holidays-empty-state/public-holidays-empty-state.component-module';
+import { CategoriesCheckboxEmptyStateComponentModule } from './components/categories-checkbox-empty-state/categories-checkbox-empty-state.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -100,8 +102,9 @@ import { PublicHolidaysEmptyStateComponentModule } from './components/public-hol
     { path: 'products-empty-state', component: ProductsEmptyStateComponent },
     { path: 'categories-empty-state', component: CategoriesEmptyStateComponent },
     { path: 'crypto-empty-state', component: CryptoEmptyStateComponent },
-    { path: 'holidays-empty-state', component: PublicHolidaysEmptyStateComponent }
-  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule, ProductsMasterDetailsComponentModule, EmployeeMasterDetailsComponentModule, CryptoMasterDetailsComponentModule, ProductsEmptyStateComponentModule, CategoriesEmptyStateComponentModule, CryptoEmptyStateComponentModule, PublicHolidaysEmptyStateComponentModule],
+    { path: 'holidays-empty-state', component: PublicHolidaysEmptyStateComponent },
+    { path: 'categories-checkbox-empty-state', component: CategoriesCheckboxEmptyStateComponent }
+  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule, ProductsMasterDetailsComponentModule, EmployeeMasterDetailsComponentModule, CryptoMasterDetailsComponentModule, ProductsEmptyStateComponentModule, CategoriesEmptyStateComponentModule, CryptoEmptyStateComponentModule, PublicHolidaysEmptyStateComponentModule, CategoriesCheckboxEmptyStateComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

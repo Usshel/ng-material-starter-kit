@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title>Select Categories</mat-card-title>
+  <mat-card-content>
+    <section *ngIf="categoriesList$ | async as list; else loading">
+      <ng-container *ngIf="list.length > 0; else emptyState">
+        <mat-checkbox *ngFor="let item of list">{{item}}</mat-checkbox>
+      </ng-container>
+    </section>
+    <ng-template #emptyState>
+      <div style="text-align: center">
+        <img style="height: 500px" src="assets/no-data.jpg" alt=""></div>
+      <div style="text-align: center">
+        <a
+          href="https://www.freepik.com/free-vector/no-data-concept-illustration_5928292.htm#query=no%20data%20found&position=0&from_view=keyword">Image
+          by storyset</a> on Freepik
+      </div>
+
+    </ng-template>
+  </mat-card-content>
+  <ng-template #loading>
+    <mat-progress-spinner
+      [color]="'primary'"
+      [mode]="'indeterminate'"
+      [value]="50">
+    </mat-progress-spinner>
+  </ng-template>
+</mat-card>
