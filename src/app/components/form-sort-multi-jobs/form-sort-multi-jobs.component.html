@@ -1,0 +1,46 @@
+<mat-card>
+    <mat-card-title>Sort by</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="sortBy">
+            <div>
+                <mat-form-field appearance="fill">
+                <mat-label>Choose an property</mat-label>
+                <mat-select  matInput type="text" placeholder="Prop" formControlName="prop">
+                    <mat-option *ngFor="let item of props | async" [value]="item">{{item}}</mat-option>
+                </mat-select>
+                </mat-form-field>
+            </div>
+        </form>
+        <form [formGroup]="sortBy">
+            <div>
+                <mat-form-field appearance="fill">
+                <mat-label>Choose an direction</mat-label>
+                <mat-select matInput type="text" placeholder="Direction" formControlName="direction">
+                    <mat-option *ngFor="let item of direction | async" [value]="item">
+                    {{item}}    
+                </mat-option>
+                </mat-select>
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+<mat-card>
+    <mat-card-title> List of Jobs</mat-card-title>
+    <mat-card-content> 
+        <mat-list role="list"><mat-list-item role="listitem" *ngFor="let item of listJobs$ | async">title: {{item.title}} description: {{item.description}}</mat-list-item></mat-list>
+    </mat-card-content>
+</mat-card>
+
+<!-- <form [formGroup]="sortBy">
+    <div><mat-form-field appearance="fill">
+        <mat-label>Prop</mat-label>
+        <input matInput type="text" placeholder="Prop" formControlName="prop" required>
+        <mat-error *ngIf="sortBy.get('prop')!.invalid">prop is invalid</mat-error>
+    </mat-form-field></div>
+    
+    
+    <div><mat-form-field appearance="fill"><mat-label>Direction</mat-label>
+        <input matInput type="text" placeholder="Direction" formControlName="direction" required>
+        <mat-error *ngIf="sortBy.get('direction')!.invalid">direction is invalid</mat-error>
+    </mat-form-field></div><div><button type="submit" mat-raised-button color="primary">Submit</button></div></form> -->
