@@ -33,6 +33,7 @@ import { ProductsSearchComponent } from './components/products-search/products-s
 import { FormSortSingleProductsComponent } from './components/form-sort-single-products/form-sort-single-products.component';
 import { FormSortMultiJobsComponent } from './components/form-sort-multi-jobs/form-sort-multi-jobs.component';
 import { FormFilterSingleProductsRadioComponent } from './components/form-filter-single-products-radio/form-filter-single-products-radio.component';
+import { FilterMultiUsersComponent } from './components/filter-multi-users/filter-multi-users.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -79,6 +80,7 @@ import { ProductsSearchComponentModule } from './components/products-search/prod
 import { FormSortSingleProductsComponentModule } from './components/form-sort-single-products/form-sort-single-products.component-module';
 import { FormSortMultiJobsComponentModule } from './components/form-sort-multi-jobs/form-sort-multi-jobs.component-module';
 import { FormFilterSingleProductsRadioComponentModule } from './components/form-filter-single-products-radio/form-filter-single-products-radio.component-module';
+import { FilterMultiUsersComponentModule } from './components/filter-multi-users/filter-multi-users.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -115,8 +117,9 @@ import { FormFilterSingleProductsRadioComponentModule } from './components/form-
     { path: 'products-search', component: ProductsSearchComponent },
     { path: 'form-sort-single-products', component: FormSortSingleProductsComponent },
     { path: 'form-sort-multi-jobs', component: FormSortMultiJobsComponent },
-    { path: 'form-filter-single-products-radio', component: FormFilterSingleProductsRadioComponent }
-  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule, ProductsMasterDetailsComponentModule, EmployeeMasterDetailsComponentModule, CryptoMasterDetailsComponentModule, ProductsEmptyStateComponentModule, CategoriesEmptyStateComponentModule, CryptoEmptyStateComponentModule, PublicHolidaysEmptyStateComponentModule, CategoriesCheckboxEmptyStateComponentModule, ProductsSearchComponentModule, FormSortSingleProductsComponentModule, FormSortMultiJobsComponentModule, FormFilterSingleProductsRadioComponentModule],
+    { path: 'form-filter-single-products-radio', component: FormFilterSingleProductsRadioComponent },
+    { path: 'filter-multi-users', component: FilterMultiUsersComponent }
+  ]), ProductListComponentModule, ProductServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptoServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CategoriesCheckboxlistComponentModule, CategoriesSelectionComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, ProductDetailsServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, CartDetailsComponentModule, CartDetailsServiceModule, UserDetailsComponentModule, UserServiceModule, BoredActivitiesComponentModule, BoredServiceModule, FilteredProductListComponentModule, FilteredProductListSecondComponentModule, EmployeesSortingFilteringComponentModule, ProductsAdvancedDeleteComponentModule, EmployeesAdvancedDeleteComponentModule, ProductsMasterDetailsComponentModule, EmployeeMasterDetailsComponentModule, CryptoMasterDetailsComponentModule, ProductsEmptyStateComponentModule, CategoriesEmptyStateComponentModule, CryptoEmptyStateComponentModule, PublicHolidaysEmptyStateComponentModule, CategoriesCheckboxEmptyStateComponentModule, ProductsSearchComponentModule, FormSortSingleProductsComponentModule, FormSortMultiJobsComponentModule, FormFilterSingleProductsRadioComponentModule, FilterMultiUsersComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

@@ -13,7 +13,7 @@
   <mat-card-title>Products</mat-card-title>
   <mat-card-content>
     <mat-list role="list">
-      <mat-list-item role="listitem" *ngFor="let item of listProducts$ | async">{{item.title}}</mat-list-item>
+      <mat-list-item role="listitem" *ngFor="let item of listProducts$ | async">{{item.title}} of category: {{item.category}} </mat-list-item>
     </mat-list>
   </mat-card-content>
 </mat-card>
