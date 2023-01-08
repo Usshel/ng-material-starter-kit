@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>Search</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="search">
+            <div>
+                <mat-form-field appearance="fill"><mat-label>Title Or Price</mat-label>
+                    <!-- #inputProduct -->
+                <input matInput type="text" placeholder="Title Or Price" formControlName="titleOrPrice">
+            </mat-form-field>
+        </div>
+            </form>
+    </mat-card-content>
+</mat-card>
+<mat-card>
+    <mat-card-title>List of Products</mat-card-title>
+    <mat-card-content *ngIf="listProducts$ | async as list">
+        <mat-list role="list" *ngIf="list.length > 0; else emptyState">
+            <mat-list-item role="listitem" *ngFor="let item of list">{{item.title}} {{item.price}}$</mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
+<ng-template #emptyState>
+    Oops! There is no data!
+</ng-template>

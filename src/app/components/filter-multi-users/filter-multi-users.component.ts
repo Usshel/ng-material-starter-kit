@@ -24,17 +24,17 @@ export class FilterMultiUsersComponent {
   readonly listUsers$: Observable<UsersModel[]> = combineLatest([
     this._filterMultiUsersService.getAllUsers(),
     this.roleAndDepartment.valueChanges.pipe(
-      startWith('')
+      startWith({formRole: '', formDepartment: ''})
     )
   ]).pipe(
-    map(([user, idDepartment]) => user.filter(
-      user => ((user.departmentId == idDepartment.formDepartment) && (user.roleId == idDepartment.formRole))
+    map(([user, roleAndDepartment]) => user.filter(
+      user => ((user.departmentId == roleAndDepartment.formDepartment) && (user.roleId == roleAndDepartment.formRole))
     ))
   );
 
 
 
-  dataSource = this.listUsers$ || this.departments$;
+  readonly dataSource = this.listUsers$
   private _nameDepartmentSubject: Subject<string> = new Subject<string>();
   public nameDepartment$: Observable<string> = this._nameDepartmentSubject.asObservable();
   private _nameRoleSubject: Subject<string> = new Subject<string>();
@@ -51,4 +51,6 @@ export class FilterMultiUsersComponent {
     this._nameRoleSubject.next(nameRole)
   }
 
+  onRoleAndDepartmentSubmitted(roleAndDepartment: FormGroup): void {
+  }
 }
